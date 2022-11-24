@@ -1,0 +1,31 @@
+<div class="cold-md-8 col-md-offset-2">
+    <form [formGroup]= "myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            
+            <label for="content">Conteudo</label>
+            <input type="text"
+                 id="content" 
+                class="form-control"
+                formControlName="content"
+                ngModel
+                 name="user"
+                required>  
+                </div>  
+                <div class="form-group">
+
+            <label for="user">Usuario</label>
+            <input type="text"
+                 id="user" 
+                class="form-control"
+                 formControlName="user"
+                 ngModel
+                 name="user"
+                required>
+            </div>
+        
+        <button type="submit" class="btn btn-primary"
+        [disabled]="!myForm.valid"
+        (click)="onEnviarPost()"
+        >Fazer post</button>
+    </form>
+</div>

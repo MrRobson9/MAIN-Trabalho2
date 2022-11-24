@@ -1,0 +1,26 @@
+<article class="panel panel-default" >
+    <div class="panel-body">
+        {{ postVarClasse.content }}
+    </div>
+    <footer class="panel-footer">
+
+        <div class="author">
+            {{ postVarClasse.user }}
+        </div>
+        
+        <div class="likes-display">
+            {{postVarClasse.likes}}
+        </div>
+        
+        <div class="delete">
+            <a (click)="onDelete()">Delete</a>
+        </div>
+
+        <div class="likes">
+            <a (click)="onLike()">Like</a></div>
+        
+        <div class="share">
+            <a (click)="onShare()">Share</a>
+        </div>
+    </footer>
+</article>
